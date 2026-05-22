@@ -36,7 +36,7 @@ export default function B2BForm() {
         message: data.message
       };
 
-      const res = await fetch("http://localhost:3000/contacts", {
+      const res = await fetch("https://hitzone-backend-psi.vercel.app/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -104,9 +104,8 @@ export default function B2BForm() {
             <input
               type="text"
               placeholder="Enter your name"
-              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${
-                errors.name ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
-              }`}
+              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.name ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+                }`}
               {...register("name", { required: "Name is required" })}
             />
             {errors.name && (
@@ -120,9 +119,8 @@ export default function B2BForm() {
             <input
               type="email"
               placeholder="Enter your email"
-              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${
-                errors.email ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
-              }`}
+              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.email ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+                }`}
               {...register("email", {
                 required: "Email is required",
                 pattern: {
@@ -145,9 +143,8 @@ export default function B2BForm() {
           <input
             type="tel"
             placeholder="Enter phone number"
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${
-              errors.phone ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
-            }`}
+            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.phone ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+              }`}
             {...register("phone", {
               required: "Phone number is required",
               pattern: {
@@ -167,9 +164,8 @@ export default function B2BForm() {
             Service Required <span className="text-red-500">*</span>
           </label>
           <select
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white focus:outline-none transition-colors shadow-inner appearance-none cursor-pointer ${
-              errors.serviceRequired ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
-            }`}
+            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white focus:outline-none transition-colors shadow-inner appearance-none cursor-pointer ${errors.serviceRequired ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+              }`}
             style={{
               backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`,
               backgroundRepeat: 'no-repeat',
@@ -200,9 +196,8 @@ export default function B2BForm() {
           <textarea
             rows="5"
             placeholder="Tell us more about your vision..."
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors resize-none shadow-inner ${
-              errors.message ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
-            }`}
+            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors resize-none shadow-inner ${errors.message ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+              }`}
             {...register("message", { required: "Message is required" })}
           ></textarea>
           {errors.message && (

@@ -16,7 +16,7 @@ export default function BookingPage() {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const res = await fetch('http://localhost:3000/stores');
+        const res = await fetch('https://hitzone-backend-psi.vercel.app/stores');
         if (res.ok) {
           const data = await res.json();
           setBranches(data);
@@ -356,8 +356,8 @@ Please confirm my slot. Thank you!`;
                       onClick={handlePrevMonth}
                       disabled={calendarYear === today.getFullYear() && calendarMonth === today.getMonth()}
                       className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${calendarYear === today.getFullYear() && calendarMonth === today.getMonth()
-                          ? 'bg-[#151b22] text-gray-600 cursor-not-allowed opacity-50'
-                          : 'bg-[#1e252e] text-gray-400 hover:text-white'
+                        ? 'bg-[#151b22] text-gray-600 cursor-not-allowed opacity-50'
+                        : 'bg-[#1e252e] text-gray-400 hover:text-white'
                         }`}
                     >
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -395,10 +395,10 @@ Please confirm my slot. Thank you!`;
                         onClick={() => setSelectedDate(new Date(item.year, item.month, item.day))}
                         disabled={isPast}
                         className={`text-xs py-2 w-full rounded-sm transition-colors ${isPast
-                            ? 'text-gray-600 cursor-not-allowed opacity-40'
-                            : isSel
-                              ? 'bg-[#AED500] text-[#020B1A] font-bold shadow-md shadow-[#AED500]/20'
-                              : 'text-gray-300 hover:bg-[#1e252e]'
+                          ? 'text-gray-600 cursor-not-allowed opacity-40'
+                          : isSel
+                            ? 'bg-[#AED500] text-[#020B1A] font-bold shadow-md shadow-[#AED500]/20'
+                            : 'text-gray-300 hover:bg-[#1e252e]'
                           }`}
                       >
                         {item.day}
@@ -461,7 +461,7 @@ Please confirm my slot. Thank you!`;
                  <span className="text-3xl font-normal text-white">₹{totalPrice}</span>
                </div> */}
 
-              <button 
+              <button
                 onClick={handleConfirmBooking}
                 className="w-full bg-[#AED500] hover:bg-[#c2eb0d] text-[#020B1A] font-bold tracking-widest uppercase py-4 rounded-sm flex items-center justify-center transition-colors shadow-lg shadow-[#AED500]/10 mb-4"
               >

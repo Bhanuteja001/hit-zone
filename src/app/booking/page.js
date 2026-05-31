@@ -16,7 +16,7 @@ export default function BookingPage() {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const res = await fetch('https://hitzone-backend-psi.vercel.app/stores');
+        const res = await fetch('https://hitzone-backend-three.vercel.app/stores');
         if (res.ok) {
           const data = await res.json();
           setBranches(data);

@@ -36,7 +36,7 @@ export default function B2BForm() {
         message: data.message
       };
 
-      const res = await fetch("https://hitzone-backend-psi.vercel.app/contacts", {
+      const res = await fetch("https://hitzone-backend-three.vercel.app/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

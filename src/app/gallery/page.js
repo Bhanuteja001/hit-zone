@@ -90,7 +90,7 @@ export default function GalleryPage() {
           <span className="text-[#AED500] text-[10px] sm:text-[12px] font-bold tracking-[0.25em] uppercase mb-4 block animate-pulse">
             Visualizing Excellence
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 uppercase">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 uppercase">
             OUR <span className="text-[#AED500]">ARENAS</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
@@ -128,7 +128,7 @@ export default function GalleryPage() {
                 <h3 className="text-xl font-extrabold text-white mb-2 uppercase tracking-wide group-hover:text-[#AED500] transition-colors duration-200">
                   {image.title}
                 </h3>
-                <p className="text-gray-400 text-xs line-clamp-2 leading-relaxed opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                <p className="text-gray-400 text-xs line-clamp-2 leading-relaxed transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 opacity-100 translate-y-0">
                   {image.description}
                 </p>
               </div>
@@ -165,25 +165,25 @@ export default function GalleryPage() {
           <div className="absolute inset-0" onClick={() => setSelectedIdx(null)}></div>
 
           {/* Lightbox Container */}
-          <div className="relative max-w-5xl w-full h-[85vh] max-h-[750px] mx-4 z-10 flex flex-col justify-between">
+          <div className="relative max-w-5xl w-full h-[85vh] max-h-[750px] mx-2 sm:mx-4 z-10 flex flex-col justify-between">
             
             {/* Top Bar with Title and Close button */}
             <div className="w-full flex justify-between items-center mb-3 text-white shrink-0">
-              <div>
-                <span className="text-[#AED500] text-[10px] font-bold uppercase tracking-widest">
+              <div className="max-w-[calc(100%-50px)]">
+                <span className="text-[#AED500] text-[9px] sm:text-[10px] font-bold uppercase tracking-widest block mb-0.5">
                   {galleryImages[selectedIdx].category}
                 </span>
-                <h2 className="text-lg md:text-xl font-bold uppercase tracking-wide">
+                <h2 className="text-sm sm:text-lg md:text-xl font-bold uppercase tracking-wide truncate">
                   {galleryImages[selectedIdx].title}
                 </h2>
               </div>
               
               <button
                 onClick={() => setSelectedIdx(null)}
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/20 hover:scale-105 transition-all duration-200 focus:outline-none cursor-pointer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/20 hover:scale-105 transition-all duration-200 focus:outline-none cursor-pointer shrink-0"
                 aria-label="Close lightbox"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4.5 h-4.5 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -202,10 +202,10 @@ export default function GalleryPage() {
               {/* Navigation Left */}
               <button
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
                 aria-label="Previous image"
               >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
@@ -213,21 +213,21 @@ export default function GalleryPage() {
               {/* Navigation Right */}
               <button
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
                 aria-label="Next image"
               >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
 
             {/* Bottom Metadata Info */}
-            <div className="w-full bg-[#0c1219]/90 border border-white/5 rounded-lg p-5 mt-3 text-center sm:text-left shrink-0">
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="w-full bg-[#0c1219]/90 border border-white/5 rounded-lg p-4 sm:p-5 mt-3 text-center sm:text-left shrink-0">
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                 {galleryImages[selectedIdx].description}
               </p>
-              <div className="mt-3 text-[10px] text-gray-500 font-mono flex justify-center sm:justify-start space-x-4">
+              <div className="mt-2.5 sm:mt-3 text-[9px] sm:text-[10px] text-gray-500 font-mono flex justify-center sm:justify-start space-x-4">
                 <span>INDEX: {selectedIdx + 1} / {galleryImages.length}</span>
                 <span>•</span>
                 <span>RESOLUTION: HIGH DEFINITION</span>

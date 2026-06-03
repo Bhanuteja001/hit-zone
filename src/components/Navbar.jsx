@@ -57,7 +57,7 @@ export default function Navbar() {
             </button>
 
             {/* Custom Background Button */}
-            <button className="hidden sm:inline-flex items-center justify-center font-bold bg-[#AED500] text-[#020B1A] px-5 py-1 text-[20px] rounded-sm shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
+            <button className="hidden sm:inline-flex cursor-pointer items-center justify-center font-bold bg-[#AED500] text-[#020B1A] px-5 py-1 text-[20px] rounded-sm shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
               GET A QUOTE
             </button>
 

@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function B2BPage() {
   return (
-    <div className="bg-[#0b0f15] min-h-screen text-white">
+    <div className="bg-[#020b1a] min-h-screen text-white">
       {/* Hero Section */}
       <section className="flex items-center pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -44,7 +44,7 @@ export default function B2BPage() {
                       />
                       <path
                         d="M16 9.5L10.5 15L7.5 12"
-                        stroke="#0b0f15"
+                        stroke="#020b1a"
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -70,7 +70,7 @@ export default function B2BPage() {
                       />
                       <path
                         d="M16 9.5L10.5 15L7.5 12"
-                        stroke="#0b0f15"
+                        stroke="#020b1a"
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -238,7 +238,7 @@ export default function B2BPage() {
               <p className="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
                 High-impact 20mm rubberized interlocking tiles designed for heavy weights and high-intensity zones.
               </p>
-              <div className="relative h-32 w-full mb-5 bg-[#0b0f15] rounded-sm overflow-hidden border border-black/50 shadow-inner">
+              <div className="relative h-32 w-full mb-5 bg-[#020b1a] rounded-sm overflow-hidden border border-black/50 shadow-inner">
                 <Image src="/assets/Home/Kondapur.png" alt="Gym Floor" fill className="object-cover grayscale opacity-70" />
                 {/* floor grid pattern */}
                 <div className="absolute inset-0" style={{backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3}}></div>
@@ -329,7 +329,7 @@ export default function B2BPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="py-24 border-t border-white/5 bg-[#0b0f15]">
+      <section id="contact" className="py-24 border-t border-white/5 bg-[#020b1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             

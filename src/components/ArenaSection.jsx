@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ArenaSection() {
   return (
-    <section className="bg-[#0b0f15] py-20">
+    <section className="bg-[#020B1A] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Area */}

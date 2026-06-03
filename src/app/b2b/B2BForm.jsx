@@ -104,7 +104,7 @@ export default function B2BForm() {
             <input
               type="text"
               placeholder="Enter your name"
-              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.name ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+              className={`w-full bg-[#020b1a] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.name ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
                 }`}
               {...register("name", { required: "Name is required" })}
             />
@@ -119,7 +119,7 @@ export default function B2BForm() {
             <input
               type="email"
               placeholder="Enter your email"
-              className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.email ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+              className={`w-full bg-[#020b1a] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.email ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
                 }`}
               {...register("email", {
                 required: "Email is required",
@@ -143,7 +143,7 @@ export default function B2BForm() {
           <input
             type="tel"
             placeholder="Enter phone number"
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.phone ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+            className={`w-full bg-[#020b1a] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors shadow-inner ${errors.phone ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
               }`}
             {...register("phone", {
               required: "Phone number is required",
@@ -164,7 +164,7 @@ export default function B2BForm() {
             Service Required <span className="text-red-500">*</span>
           </label>
           <select
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white focus:outline-none transition-colors shadow-inner appearance-none cursor-pointer ${errors.serviceRequired ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+            className={`w-full bg-[#020b1a] border rounded-md px-4 py-3 text-sm text-white focus:outline-none transition-colors shadow-inner appearance-none cursor-pointer ${errors.serviceRequired ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
               }`}
             style={{
               backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`,
@@ -175,13 +175,13 @@ export default function B2BForm() {
             }}
             {...register("serviceRequired", { required: "Please select a service" })}
           >
-            <option value="" className="text-gray-600 bg-[#0b0f15]">Select a service</option>
-            <option value="Indoor Cricket Nets" className="text-white bg-[#0b0f15]">Indoor Cricket Nets</option>
-            <option value="Outdoor Cricket Nets" className="text-white bg-[#0b0f15]">Outdoor Cricket Nets</option>
-            <option value="Batting Cage Installation" className="text-white bg-[#0b0f15]">Batting Cage Installation</option>
-            <option value="Box Type Cricket Nets" className="text-white bg-[#0b0f15]">Box Type Cricket Nets</option>
-            <option value="Professional Turf Nets" className="text-white bg-[#0b0f15]">Professional Turf Nets</option>
-            <option value="Custom Net Solutions" className="text-white bg-[#0b0f15]">Custom Net Solutions</option>
+            <option value="" className="text-gray-600 bg-[#020b1a]">Select a service</option>
+            <option value="Indoor Cricket Nets" className="text-white bg-[#020b1a]">Indoor Cricket Nets</option>
+            <option value="Outdoor Cricket Nets" className="text-white bg-[#020b1a]">Outdoor Cricket Nets</option>
+            <option value="Batting Cage Installation" className="text-white bg-[#020b1a]">Batting Cage Installation</option>
+            <option value="Box Type Cricket Nets" className="text-white bg-[#020b1a]">Box Type Cricket Nets</option>
+            <option value="Professional Turf Nets" className="text-white bg-[#020b1a]">Professional Turf Nets</option>
+            <option value="Custom Net Solutions" className="text-white bg-[#020b1a]">Custom Net Solutions</option>
           </select>
           {errors.serviceRequired && (
             <p className="mt-1 text-xs text-red-500">{errors.serviceRequired.message}</p>
@@ -196,7 +196,7 @@ export default function B2BForm() {
           <textarea
             rows="5"
             placeholder="Tell us more about your vision..."
-            className={`w-full bg-[#0b0f15] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors resize-none shadow-inner ${errors.message ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
+            className={`w-full bg-[#020b1a] border rounded-md px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors resize-none shadow-inner ${errors.message ? "border-red-500 focus:border-red-500" : "border-white/5 focus:border-[#AED500]"
               }`}
             {...register("message", { required: "Message is required" })}
           ></textarea>

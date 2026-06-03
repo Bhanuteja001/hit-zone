@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function Footer() {
   return (
-    <footer className="bg-[#0b0f15] border-t border-white/5 pt-16 pb-8 text-sm">
+    <footer className="bg-[#020B1A] border-t border-white/5 pt-16 pb-8 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-16">
           

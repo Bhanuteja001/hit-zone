@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 max-w-2xl w-full lg:w-auto">
             <div className="flex items-center text-[#AED500] flex-shrink-0">
-              <Image src="/logo.png" alt="Logo" width={150} height={100} className="w-auto h-10 object-contain" />
+              <Image src="/Logo.png" alt="Logo" width={150} height={100} className="w-auto h-10 object-contain" />
             </div>
 
             <p className="text-gray-400 leading-relaxed max-w-md">

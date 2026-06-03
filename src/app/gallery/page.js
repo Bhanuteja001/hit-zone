@@ -58,6 +58,18 @@ export default function GalleryPage() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedIdx]);
 
+  // Prevent background scroll when lightbox is open
+  useEffect(() => {
+    if (selectedIdx !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedIdx]);
+
   const handlePrev = () => {
     setSelectedIdx((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
   };
@@ -153,10 +165,10 @@ export default function GalleryPage() {
           <div className="absolute inset-0" onClick={() => setSelectedIdx(null)}></div>
 
           {/* Lightbox Container */}
-          <div className="relative max-w-5xl w-full mx-4 z-10 flex flex-col items-center">
+          <div className="relative max-w-5xl w-full h-[85vh] max-h-[750px] mx-4 z-10 flex flex-col justify-between">
             
             {/* Top Bar with Title and Close button */}
-            <div className="w-full flex justify-between items-center mb-4 text-white">
+            <div className="w-full flex justify-between items-center mb-3 text-white shrink-0">
               <div>
                 <span className="text-[#AED500] text-[10px] font-bold uppercase tracking-widest">
                   {galleryImages[selectedIdx].category}
@@ -178,7 +190,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Media Display Area */}
-            <div className="relative aspect-[16/10] md:aspect-[16/9] w-full bg-black rounded-lg overflow-hidden border border-white/10 flex items-center justify-center">
+            <div className="relative flex-1 w-full bg-black rounded-lg overflow-hidden border border-white/10 flex items-center justify-center min-h-0">
               <Image
                 src={galleryImages[selectedIdx].src}
                 alt={galleryImages[selectedIdx].title}
@@ -190,7 +202,7 @@ export default function GalleryPage() {
               {/* Navigation Left */}
               <button
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
                 aria-label="Previous image"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -201,7 +213,7 @@ export default function GalleryPage() {
               {/* Navigation Right */}
               <button
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-black/80 text-white flex items-center justify-center transition-all hover:scale-105 cursor-pointer focus:outline-none z-20"
                 aria-label="Next image"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -211,7 +223,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Bottom Metadata Info */}
-            <div className="w-full bg-[#0c1219]/90 border border-white/5 rounded-lg p-5 mt-4 text-center sm:text-left">
+            <div className="w-full bg-[#0c1219]/90 border border-white/5 rounded-lg p-5 mt-3 text-center sm:text-left shrink-0">
               <p className="text-gray-300 text-sm leading-relaxed">
                 {galleryImages[selectedIdx].description}
               </p>

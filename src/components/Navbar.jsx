@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Left Section: Logo */}
           <div className="flex-1 flex items-center justify-start">
             <Link href="/" className=''>
-              <Image src="/logo.png" alt="Logo" width={150} height={100} className="w-auto h-10 object-contain" />
+              <Image src="/Logo.png" alt="Logo" width={150} height={100} className="w-auto h-10 object-contain" />
             </Link>
           </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import api from "@/api/axios";
 
 export default function B2BForm() {
   const [isSubmittingState, setIsSubmitting] = useState(false);
@@ -36,23 +37,11 @@ export default function B2BForm() {
         message: data.message
       };
 
-      const res = await fetch("https://hitzone-backend-three.vercel.app/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      });
-
-      const responseData = await res.json();
-
-      if (!res.ok) {
-        throw new Error(responseData.message || "Failed to submit request.");
-      }
+      await api.post("/contacts", payload);
 
       setSubmitSuccess(true);
     } catch (err) {
-      setSubmitError(err.message || "An unexpected error occurred. Please try again.");
+      setSubmitError(err.response?.data?.message || err.message || "An unexpected error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import api from '@/api/axios';
 
 export default function BookingPage() {
   const [branches, setBranches] = useState([]);
@@ -16,13 +17,11 @@ export default function BookingPage() {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const res = await fetch('https://hitzone-backend-three.vercel.app/stores');
-        if (res.ok) {
-          const data = await res.json();
-          setBranches(data);
-          if (data.length > 0) {
-            setSelectedBranch(data[0]._id);
-          }
+        const res = await api.get('/stores');
+        const data = res.data;
+        setBranches(data);
+        if (data.length > 0) {
+          setSelectedBranch(data[0]._id);
         }
       } catch (err) {
         console.error('Error fetching branches:', err);

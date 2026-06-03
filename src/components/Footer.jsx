@@ -26,6 +26,7 @@ export default function Footer() {
               <li><Link href="/home" className="text-gray-400 hover:text-[#AED500] transition-colors font-bold tracking-wider text-xs">HOME</Link></li>
               <li><Link href="/booking" className="text-gray-400 hover:text-[#AED500] transition-colors font-bold tracking-wider text-xs">BOOKING</Link></li>
               <li><Link href="/b2b" className="text-gray-400 hover:text-[#AED500] transition-colors font-bold tracking-wider text-xs">B2B</Link></li>
+              <li><Link href="/gallery" className="text-gray-400 hover:text-[#AED500] transition-colors font-bold tracking-wider text-xs">GALLERY</Link></li>
               <li><Link href="/b2b#contact" className="text-gray-400 hover:text-[#AED500] transition-colors font-bold tracking-wider text-xs">CONTACT US</Link></li>
             </ul>
           </div>

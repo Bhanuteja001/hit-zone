@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ArenaSection() {
   return (
-    <section className="bg-[#020B1A] py-20">
+    <section id="choose-arena" className="bg-[#020B1A] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Area */}
@@ -18,18 +18,13 @@ export default function ArenaSection() {
             </p>
           </div>
           
-          {/* Navigation Arrows */}
-          <div className="flex items-center space-x-3 mt-6 md:mt-0">
-            <button aria-label="Previous" className="w-10 h-10 border border-gray-700 text-gray-400 hover:text-white hover:border-gray-500 rounded-md flex items-center justify-center transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button aria-label="Next" className="w-10 h-10 bg-[#AED500] hover:bg-[#c2ed15] text-[#020B1A] rounded-md flex items-center justify-center transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          {/* Load More Button */}
+          <div className="mt-6 md:mt-0">
+            <Link href="/booking">
+              <button className="px-6 py-2.5 bg-[#AED500] hover:bg-[#c2ed15] text-[#020B1A] font-bold text-sm tracking-wider uppercase rounded-sm shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer">
+                Load More
+              </button>
+            </Link>
           </div>
         </div>
 

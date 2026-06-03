@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function HomeSection() {
@@ -35,12 +36,14 @@ export default function HomeSection() {
 
             {/* Buttons */}
             <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 w-full sm:w-80 lg:w-auto pt-2 lg:pt-0">
-              <button className="w-full lg:w-auto px-8 py-3.5 bg-[#AED500] hover:bg-[#c2ed15] text-[#020B1A] font-bold text-sm rounded-sm transition-all duration-300 uppercase tracking-wide hover:-translate-y-1 hover:shadow-lg hover:shadow-[#AED500]/20">
-                Explore Facilities
-              </button>
-              <button className="w-full lg:w-auto px-8 py-3.5 bg-transparent border border-[#1E50FF] hover:border-[#3A6DFF] text-[#1E50FF] hover:text-[#3A6DFF] font-bold text-sm rounded-sm transition-all duration-300 uppercase tracking-wide hover:-translate-y-1">
+              <Link href="/b2b" className="w-full lg:w-auto">
+                <button className="w-full lg:w-auto px-8 py-3.5 bg-[#AED500] hover:bg-[#c2ed15] text-[#020B1A] font-bold text-sm rounded-sm transition-all duration-300 uppercase tracking-wide hover:-translate-y-1 hover:shadow-lg hover:shadow-[#AED500]/20 cursor-pointer">
+                  Explore Facilities
+                </button>
+              </Link>
+              {/* <button className="w-full lg:w-auto px-8 py-3.5 bg-transparent border border-[#1E50FF] hover:border-[#3A6DFF] text-[#1E50FF] hover:text-[#3A6DFF] font-bold text-sm rounded-sm transition-all duration-300 uppercase tracking-wide hover:-translate-y-1">
                 Live Status
-              </button>
+              </button> */}
             </div>
           </div>
 

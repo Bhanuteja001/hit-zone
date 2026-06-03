@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${spaceMono.variable} font-sans h-full antialiased`}
+      className={`${spaceMono.variable} font-sans h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
